@@ -75,7 +75,7 @@ resource "aws_iam_policy" "additional" {
 
 resource "aws_autoscaling_policy" "node-autoscaling" {
   name                   = "node-autoscaling"
-  autoscaling_group_name = module.eks.eks_managed_node_groups.eks_nodes.node_group_autoscaling_group_names[0]
+  autoscaling_group_name = module.eks.eks_managed_node_groups.ercli_eks_nodes.node_group_autoscaling_group_names[0]
   policy_type            = "TargetTrackingScaling"
   estimated_instance_warmup = 30
 
